@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&family=Poppins:wght@600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', cursive, Arial;
+    border: none;
+    outline: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+   
+    /* fundo degradê */
+    background: linear-gradient( 
+        90deg,
+        rgba(255,162,0) 0%,
+        rgba(255,195,0) 100%
+    );
+}
+
+.calculadora{
+    position: relative;
+    display: grid; /* define o grid */
+    grid-gap: 2px; /* vão entre as grades */
+}
+
+.calculadora .tela{
+    grid-column: span 4; /* define quantas colunas terá */
+    height: 100px;
+    text-align: right;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.calculadora span{
+    display: grid;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 80px;
+    background-color: #000000;
+    user-select: none; /* texto não pode ser selecionado */
+}
+
+.calculadora span:active{
+    background-color: #fff;
+    color: #000000;
+}
+
+.calculadora span.limpar{
+    grid-column: span 2;
+    width: 162px;
+    background-color: #179bd8;
+}
+
+.calculadora span.igual{
+    grid-row: span 2;
+    height: 162px;
+    line-height: 162px;
+    background-color: #179bd8;
+}
+
+.calculadora span.zero{
+    grid-column: span 2;
+    width: 162px;
+}
